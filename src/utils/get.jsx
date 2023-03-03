@@ -1,4 +1,4 @@
-const Api= 'https://api.themoviedb.org/4';
+const Api= 'https://api.themoviedb.org/3';
 export function get(path) {
     return (
         fetch(Api + path, {
@@ -8,6 +8,6 @@ export function get(path) {
                 'Content-Type': 'application/json;charset=utf-8'
             }
         })
-        .then(res=>res.json())
+        .then((result)=>result.json())
     )
 }
